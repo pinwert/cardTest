@@ -1,0 +1,323 @@
+.container {
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: Roboto,Arial,sans-serif;
+}
+
+.period {
+  padding-left: 8px;
+  display: inline;
+  font-size: 14px;
+}
+
+h4 {
+  margin: 0;
+  font-size: 18px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+li {
+  display: inline;
+  padding-right: 0.5em;
+}
+
+li h5 {
+  display: inline;
+  font-size: 16;
+  font-weight: 200;
+}
+
+li span {
+  display: inline;
+}
+.rate {
+  display: inline;
+  font-size: 18px;
+}
+
+.rating {
+  width: 102px;
+  font-size: 18px;
+  position: relative;
+  float: left;
+  top: -7px;
+}
+
+.review-count {
+  position: relative;
+  float: right;
+  font-size: 14px;
+}
+
+.rating::before {
+  content: '\2605\2605\2605\2605\2605';
+  color: #d7d8da;
+  position: absolute;
+  letter-spacing: 3px;
+}
+
+.rating::after {
+  content: '\2605\2605\2605\2605\2605';
+  color: gold;
+  position: absolute;
+  overflow: hidden;
+  letter-spacing: 3px;
+}
+
+.rating-5::after {
+    width: 100%;
+}
+
+.rating-4-5::after {
+    width: 90%;
+}
+
+.rating-4::after {
+    width: 80%;
+}
+
+.hit-thumbnail {
+  width: 100%;
+  background-size: 100%;
+}
+
+@media only screen and (max-width: 360px) {
+
+  .container {
+    width: 295px;
+    height: 262px;
+    overflow: hidden;
+  }
+
+  .simple-hit__content {
+    width: 295px;
+  }
+
+  .hit-thumbnail-container div {
+    width: 100%;
+    min-height: 180px;
+    max-height: 180px;
+    overflow: hidden;
+  }
+
+  .next, .previous {
+    display: none;
+  }
+
+  .headline-row {
+    display: none;
+  }
+
+  .list-unstyled.accommodations {
+    display: inline-flex;
+  }
+
+  .simple-hit__info-block {
+    padding: 20px 16px 8px 16px;
+    position: relative;
+    height: 82px;
+    box-sizing: border-box;
+  }
+
+  .hit-rating {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+
+  .hit-headline, .superlative {
+    display: none;
+  }
+
+  .rating-content {
+    width: 170px;
+    position: absolute;
+    gottom: 8px;
+  }
+
+  .accommodations {
+    margin-top: 0.7em;
+  }
+
+  .accommodations {
+    font-size: 14px;
+  }
+
+  .accommodation::after {
+    content: '\2022';
+    margin-left: 0.6em;
+    font-weight: 100;
+    font-size: 10px;
+    vertical-align: middle;
+  }
+
+  .accommodation:last-child::after {
+    content: '';
+  }
+
+  .accommodations .label {
+    padding: 0.3em;
+  }
+
+  .label-desktop {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .container {
+    width: 260px
+  }
+
+  .simple-hit__content {
+    max-width: 260px
+  }
+
+  .hit-thumbnail-container div {
+    width: 100%;
+    min-height: 180px;
+    max-height: 180px;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (min-width: 360px) {
+  .container {
+    width: 100%;
+    height: 248px;
+  }
+
+  .hit-thumbnail-container {
+    width: 33%;
+    position: relative;
+    float: left;
+  }
+
+  .hit-thumbnail-container div {
+    height: 248px;
+    min-height: 248px;
+    max-height: 248px;
+    overflow: hidden;
+  }
+
+  .hit-thumbnail-container a {
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+  }
+
+  .arrow-container {
+    width: 60px;
+    position: absolute;
+  }
+  .arrow-container.next {
+    right: 0;
+  }
+  .arrow-container i {
+    font-weight: 300;
+    font-size: 58px;
+    margin: 0px 20px;
+    position: absolute;
+    top: 45%;
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    color: #fff;
+  }
+  .arrow-container.next i {
+    right: 0;
+  }
+  .arrow-container i::before {
+    position: absolute;
+    font-style: normal;
+    line-height: 24px;
+  }
+  .arrow-container.previous i::before {
+    content: "\2039";
+  }
+  .arrow-container.next i::before {
+    content: "\203A";
+  }
+
+  .simple-hit__info-block {
+    width: 66%;
+    position: relative;
+    float: left;
+    padding: 24px 16px;
+    box-sizing: border-box;
+    height: 100%;
+  }
+
+  .hit-headline a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .hit-rating {
+    position: absolute;
+    bottom: 24px;
+  }
+
+  .rating-content {
+    position: absolute;
+    bottom: 24px;
+    right: 16px;
+    width: 170px;
+  }
+
+  .hit-rating .superlative {
+    color: #5fa136;
+    font-size: 13px;
+  }
+
+  .hit-rating .comment {
+    padding-right: 0.5em;
+  }
+
+  .hit-rating .price-overlay {
+    padding-top: 0.3em;
+  }
+
+  .label-mobile {
+    display: none;
+  }
+
+  .accommodations {
+    top: 39%;
+    position: absolute;
+  }
+
+  .accommodation {
+    float: left;
+    position: relative;
+    padding-right: 2.5em;
+    text-align: center;
+  }
+
+  .accommodation::after {
+    content: ' ';
+    background: #d7d8da;
+    width: 1px;
+    display: inline;
+    height: 3.5em;
+    position: absolute;
+    top: 0px;
+    right: 1.25em;
+  }
+
+  .accommodation:last-child::after {
+    content: '';
+    width: 0px;
+  }
+
+  .accommodation .count {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
